@@ -6,7 +6,7 @@ import numpy as np
 import string
 import os,re
 import random
-import util
+import rfantibody.rfdiffusion.util as util
 import gzip
 
 import pandas as pd

@@ -7,21 +7,21 @@ import logging
 from typing import List
 
 from scipy.spatial.transform import Rotation as scipy_R
-from scipy.spatial.transform import Slerp 
-import rotation_conversions
+from scipy.spatial.transform import Slerp
+from rfantibody.rfdiffusion import rotation_conversions
 
-from util import rigid_from_3_points, get_torsions
+from rfantibody.rfdiffusion.util import rigid_from_3_points, get_torsions
 
-from util import torsion_indices as TOR_INDICES 
-from util import torsion_can_flip as TOR_CAN_FLIP
-from util import reference_angles as REF_ANGLES
+from rfantibody.rfdiffusion.util import torsion_indices as TOR_INDICES
+from rfantibody.rfdiffusion.util import torsion_can_flip as TOR_CAN_FLIP
+from rfantibody.rfdiffusion.util import reference_angles as REF_ANGLES
 
-from util_module import ComputeAllAtomCoords
+from rfantibody.rfdiffusion.util_module import ComputeAllAtomCoords
 
-from diff_util import th_min_angle, th_interpolate_angles, get_aa_schedule 
+from rfantibody.rfdiffusion.diff_util import th_min_angle, th_interpolate_angles, get_aa_schedule
 
-from chemical import INIT_CRDS 
-import igso3
+from rfantibody.rfdiffusion.chemical import INIT_CRDS
+import rfantibody.rfdiffusion.igso3 as igso3
 import time 
 
 from icecream import ic  
